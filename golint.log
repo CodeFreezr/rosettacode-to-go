@@ -1,0 +1,259 @@
+corpus\rosettacode\200\100-doors\100-doors-2.go:6:11: should omit type int from declaration of var door; it will be inferred from the right-hand side
+corpus\rosettacode\200\24-game\24-game-solve.go:10:2: don't use underscores in Go names; const op_num should be opNum
+corpus\rosettacode\200\24-game\24-game-solve.go:11:2: don't use underscores in Go names; const op_add should be opAdd
+corpus\rosettacode\200\24-game\24-game-solve.go:12:2: don't use underscores in Go names; const op_sub should be opSub
+corpus\rosettacode\200\24-game\24-game-solve.go:13:2: don't use underscores in Go names; const op_mul should be opMul
+corpus\rosettacode\200\24-game\24-game-solve.go:14:2: don't use underscores in Go names; const op_div should be opDiv
+corpus\rosettacode\200\24-game\24-game-solve.go:21:1: comment on exported type Expr should be of the form "Expr ..." (with optional leading article)
+corpus\rosettacode\200\24-game\24-game-solve.go:29:5: don't use underscores in Go names; var n_cards should be nCards
+corpus\rosettacode\200\24-game\24-game-solve.go:31:5: don't use underscores in Go names; var digit_range should be digitRange
+corpus\rosettacode\200\24-game\24-game-solve.go:69:6: don't use underscores in Go names; func expr_eval should be exprEval
+corpus\rosettacode\200\24-game\24-game-solve.go:100:12: don't use underscores in Go names; func parameter ex_in should be exIn
+corpus\rosettacode\200\abundant,-deficient-and-perfect-number-classifications\abundant,-deficient-and-perfect-number-classifications.go:29:6: don't use underscores in Go names; func pfac_sum should be pfacSum
+corpus\rosettacode\200\almost-prime\almost-prime.go:5:6: don't use leading k in Go names; func kPrime should be prime
+corpus\rosettacode\200\amicable-pairs\amicable-pairs.go:20:6: don't use underscores in Go names; func pfac_sum should be pfacSum
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:17:2: don't use ALL_CAPS in Go names; use CamelCase
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:17:2: exported const ANIMATION_WIDTH should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:18:2: don't use ALL_CAPS in Go names; use CamelCase
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:19:2: don't use ALL_CAPS in Go names; use CamelCase
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:20:2: don't use ALL_CAPS in Go names; use CamelCase
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:21:2: don't use ALL_CAPS in Go names; use CamelCase
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:25:7: should omit type float64 from declaration of var l; it will be inferred from the right-hand side
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:26:7: should omit type float64 from declaration of var freq; it will be inferred from the right-hand side
+corpus\rosettacode\200\animate-a-pendulum\animate-a-pendulum.go:29:6: exported type Pendulum should have comment or be unexported
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:8:1: comment on exported function ArrayConcat should be of the form "ArrayConcat ..."
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:42:1: comment on exported function ArrayConcatInts should be of the form "ArrayConcatInts ..."
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:51:2: don't use underscores in Go names; var test1_a should be test1A
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:51:11: don't use underscores in Go names; var test1_b should be test1B
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:52:2: don't use underscores in Go names; var test1_c should be test1C
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:55:2: don't use underscores in Go names; var test2_a should be test2A
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:55:11: don't use underscores in Go names; var test2_b should be test2B
+corpus\rosettacode\200\array-concatenation\array-concatenation-2.go:56:2: don't use underscores in Go names; var test2_c should be test2C
+corpus\rosettacode\200\balanced-ternary\balanced-ternary.go:109:1: receiver name z should be consistent with previous receiver name b for bt
+corpus\rosettacode\200\balanced-ternary\balanced-ternary.go:123:1: receiver name z should be consistent with previous receiver name b for bt
+corpus\rosettacode\200\balanced-ternary\balanced-ternary.go:177:1: receiver name z should be consistent with previous receiver name b for bt
+corpus\rosettacode\200\cholesky-decomposition\cholesky-decomposition-1.go:60:1: receiver name a should be consistent with previous receiver name s for symmetric
+corpus\rosettacode\200\cholesky-decomposition\cholesky-decomposition-2.go:27:1: receiver name a should be consistent with previous receiver name m for matrix
+corpus\rosettacode\200\circles-of-given-radius-through-two-points\circles-of-given-radius-through-two-points.go:9:2: exported var Two should have comment or be unexported
+corpus\rosettacode\200\color-quantization\color-quantization.go:128:1: receiver name q should be consistent with previous receiver name qz for quantizer
+corpus\rosettacode\200\color-quantization\color-quantization.go:173:1: receiver name q should be consistent with previous receiver name qz for quantizer
+corpus\rosettacode\200\color-quantization\color-quantization.go:201:1: receiver name q should be consistent with previous receiver name qz for quantizer
+corpus\rosettacode\200\color-quantization\color-quantization.go:293:1: receiver name pq should be consistent with previous receiver name q for queue
+corpus\rosettacode\200\color-quantization\color-quantization.go:297:1: receiver name pq should be consistent with previous receiver name q for queue
+corpus\rosettacode\200\combinations\combinations-with-repetitions-2.go:5:55: don't use underscores in Go names; func parameter do_wait should be doWait
+corpus\rosettacode\200\combinations-with-repetitions\combinations-with-repetitions-2.go:5:55: don't use underscores in Go names; func parameter do_wait should be doWait
+corpus\rosettacode\200\conjugate-transpose\conjugate-transpose.go:89:1: receiver name a should be consistent with previous receiver name m for matrix
+corpus\rosettacode\200\conjugate-transpose\conjugate-transpose.go:100:1: receiver name m1 should be consistent with previous receiver name m for matrix
+corpus\rosettacode\200\currying\currying.go:8:1: exported function PowN should have comment or be unexported
+corpus\rosettacode\200\currying\currying.go:12:1: exported function PowE should have comment or be unexported
+corpus\rosettacode\200\currying\currying.go:16:6: exported type Foo should have comment or be unexported
+corpus\rosettacode\200\currying\currying.go:18:1: exported method Foo.Method should have comment or be unexported
+corpus\rosettacode\200\delegates\delegates.go:5:6: exported type Delegator should have comment or be unexported
+corpus\rosettacode\200\delegates\delegates.go:9:1: comment on exported type Thingable should be of the form "Thingable ..." (with optional leading article)
+corpus\rosettacode\200\delegates\delegates.go:14:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\delegates\delegates.go:21:6: exported type Delegate should have comment or be unexported
+corpus\rosettacode\200\digital-root\digital-root-multiplicative-digital-root.go:13:1: comment on exported function MultDigitalRoot should be of the form "MultDigitalRoot ..."
+corpus\rosettacode\200\digital-root\digital-root.go:9:1: exported function Sum should have comment or be unexported
+corpus\rosettacode\200\digital-root\digital-root.go:17:1: exported function DigitalRoot should have comment or be unexported
+corpus\rosettacode\200\documentation\documentation.go:1:1: package comment should be of the form "Package example ..."
+corpus\rosettacode\200\documentation\documentation.go:10:2: exported var Y should have its own declaration
+corpus\rosettacode\200\documentation\documentation.go:13:1: comment on exported function XP should be of the form "XP ..."
+corpus\rosettacode\200\documentation\documentation.go:25:5: exported var MEMEME should have comment or be unexported
+corpus\rosettacode\200\dutch-national-flag-problem\dutch-national-flag-problem.go:66:1: receiver name a should be consistent with previous receiver name o for ordering
+corpus\rosettacode\200\empty-directory\empty-directory.go:21:1: exported function IsEmptyDir should have comment or be unexported
+corpus\rosettacode\200\entropy\entropy-1.go:13:1: exported function H should have comment or be unexported
+corpus\rosettacode\200\exceptions\exceptions-catch-an-exception-thrown-in-a-nested-call-2.go:5:6: exported type U0 should have comment or be unexported
+corpus\rosettacode\200\exceptions\exceptions-catch-an-exception-thrown-in-a-nested-call-2.go:9:6: exported type U1 should have comment or be unexported
+corpus\rosettacode\200\extensible-prime-generator\extensible-prime-generator-1.go:74:1: receiver name p should be consistent with previous receiver name q for pQueue
+corpus\rosettacode\200\extensible-prime-generator\extensible-prime-generator-1.go:80:1: receiver name p should be consistent with previous receiver name q for pQueue
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:22:7: don't use underscores in Go names; const F_Word1 should be FWord1
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:22:7: exported const F_Word1 should have comment or be unexported
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:23:7: don't use underscores in Go names; const F_Word2 should be FWord2
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:23:7: exported const F_Word2 should have comment or be unexported
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:25:1: exported function FibonacciWord should have comment or be unexported
+corpus\rosettacode\200\fibonacci-word\fibonacci-word.go:33:1: exported function FibonacciWordGen should have comment or be unexported
+corpus\rosettacode\200\find-common-directory-path\find-common-directory-path.go:9:1: exported function CommonPrefix should have comment or be unexported
+corpus\rosettacode\200\flipping-bits-game\flipping-bits-game.go:13:8: should omit type int from declaration of var n; it will be inferred from the right-hand side
+corpus\rosettacode\200\flipping-bits-game\flipping-bits-game.go:14:18: should drop = 0 from declaration of var moves; it is the zero value
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:5:1: comment on exported type Wire should be of the form "Wire ..." (with optional leading article)
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:10:1: exported function MkWire should have comment or be unexported
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:14:1: comment on exported function Zero should be of the form "Zero ..."
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:79:1: comment on exported function HalfAdder should be of the form "HalfAdder ..."
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:88:1: comment on exported function FullAdder should be of the form "FullAdder ..."
+corpus\rosettacode\200\four-bit-adder\four-bit-adder-2.go:96:1: comment on exported function FourBitAdder should be of the form "FourBitAdder ..."
+corpus\rosettacode\200\gaussian-elimination\gaussian-elimination.go:49:1: exported function GaussPartial should have comment or be unexported
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:34:1: exported method Grmap.Extent should have comment or be unexported
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:38:1: exported method Grmap.Fill should have comment or be unexported
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:38:1: receiver name g should be consistent with previous receiver name b for Grmap
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:44:1: exported method Grmap.SetPx should have comment or be unexported
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:44:1: receiver name g should be consistent with previous receiver name b for Grmap
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:50:1: exported method Grmap.GetPx should have comment or be unexported
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:50:1: receiver name g should be consistent with previous receiver name b for Grmap
+corpus\rosettacode\200\grayscale-image\grayscale-image.go:68:1: receiver name g should be consistent with previous receiver name b for Grmap
+corpus\rosettacode\200\greatest-common-divisor\greatest-common-divisor-1.go:34:15: should omit type []pair from declaration of var testdata; it will be inferred from the right-hand side
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-3.go:66:1: exported function Hamming should have comment or be unexported
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-3.go:71:21: should drop = nil from declaration of var r; it is the zero value
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:22:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:25:9: if block ends with a return statement, so drop this else and outdent its block
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:29:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:37:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:45:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-4.go:54:6: don't use underscores in Go names; func log_nodups_hamming should be logNodupsHamming
+corpus\rosettacode\200\hamming-numbers\hamming-numbers-5.go:47:21: should drop = 0 from declaration of var count; it is the zero value
+corpus\rosettacode\200\heronian-triangles\heronian-triangles.go:32:6: don't use underscores in Go names; func is_heron should be isHeron
+corpus\rosettacode\200\heronian-triangles\heronian-triangles.go:37:6: don't use underscores in Go names; type by_area_perimeter should be byAreaPerimeter
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:8:6: exported type HuffmanTree should have comment or be unexported
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:12:6: exported type HuffmanLeaf should have comment or be unexported
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:17:6: exported type HuffmanNode should have comment or be unexported
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:22:1: exported method HuffmanLeaf.Freq should have comment or be unexported
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:22:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:26:1: exported method HuffmanNode.Freq should have comment or be unexported
+corpus\rosettacode\200\huffman-coding\huffman-coding-1.go:26:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\identity-matrix\identity-matrix-3.go:9:1: exported function I should have comment or be unexported
+corpus\rosettacode\200\identity-matrix\identity-matrix-4.go:9:1: exported function I should have comment or be unexported
+corpus\rosettacode\200\identity-matrix\identity-matrix-5.go:26:1: exported function I should have comment or be unexported
+corpus\rosettacode\200\identity-matrix\identity-matrix-5.go:26:15: exported func I returns unexported type main.matrix, which can be annoying to use
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:37:10: should omit type int32 from declaration of var i32; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:38:10: should omit type int16 from declaration of var i16; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:39:9: should omit type int8 from declaration of var i8; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:40:8: should omit type int from declaration of var i; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:41:8: should omit type rune from declaration of var r; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:42:8: should omit type byte from declaration of var b; it will be inferred from the right-hand side
+corpus\rosettacode\200\integer-overflow\integer-overflow.go:43:10: should omit type uint64 from declaration of var u64; it will be inferred from the right-hand side
+corpus\rosettacode\200\inverted-index\inverted-index.go:45:10: should replace errors.New(fmt.Sprintf(...)) with fmt.Errorf(...)
+corpus\rosettacode\200\k-means++-clustering\k-means++-clustering.go:69:6: don't use leading k in Go names; func kMeans should be means
+corpus\rosettacode\200\longest-increasing-subsequence\longest-increasing-subsequence.go:8:6: exported type Node should have comment or be unexported
+corpus\rosettacode\200\man-or-boy-test\man-or-boy-test-2.go:5:1: exported function A should have comment or be unexported
+corpus\rosettacode\200\man-or-boy-test\man-or-boy-test-3.go:16:1: exported function A should have comment or be unexported
+corpus\rosettacode\200\man-or-boy-test\man-or-boy-test-4.go:8:1: exported function A should have comment or be unexported
+corpus\rosettacode\200\matrix-multiplication\matrix-multiplication-3.go:5:6: exported type Value should have comment or be unexported
+corpus\rosettacode\200\matrix-multiplication\matrix-multiplication-3.go:6:6: exported type Matrix should have comment or be unexported
+corpus\rosettacode\200\matrix-multiplication\matrix-multiplication-3.go:8:1: exported function Multiply should have comment or be unexported
+corpus\rosettacode\200\matrix-multiplication\matrix-multiplication-4.go:20:1: receiver name m1 should be consistent with previous receiver name m for matrix
+corpus\rosettacode\200\memory-layout-of-a-data-structure\memory-layout-of-a-data-structure.go:8:2: exported const CD9 should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\morse-code\morse-code.go:69:28: exported func MorseKeys returns unexported type []main.key, which can be annoying to use
+corpus\rosettacode\200\morse-code\morse-code.go:137:7: exported const KIOCSOUND should have comment or be unexported
+corpus\rosettacode\200\multiple-regression\multiple-regression-1.go:20:1: exported function Vandermonde should have comment or be unexported
+corpus\rosettacode\200\mutual-recursion\mutual-recursion.go:5:1: exported function F should have comment or be unexported
+corpus\rosettacode\200\mutual-recursion\mutual-recursion.go:12:1: exported function M should have comment or be unexported
+corpus\rosettacode\200\object-serialization\object-serialization.go:70:6: exported type Animal should have comment or be unexported
+corpus\rosettacode\200\object-serialization\object-serialization.go:82:6: exported type Dog should have comment or be unexported
+corpus\rosettacode\200\object-serialization\object-serialization.go:98:6: exported type Cat should have comment or be unexported
+corpus\rosettacode\200\object-serialization\object-serialization.go:114:6: exported type Lab should have comment or be unexported
+corpus\rosettacode\200\object-serialization\object-serialization.go:136:6: exported type Collie should have comment or be unexported
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-1.go:19:2: don't use underscores in Go names; var byte_in should be byteIn
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-1.go:24:2: don't use underscores in Go names; var byte_out should be byteOut
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-2.go:19:2: don't use underscores in Go names; var byte_in should be byteIn
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-2.go:24:2: don't use underscores in Go names; var byte_out should be byteOut
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-3.go:18:6: exported type Coroutine should have comment or be unexported
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-3.go:24:2: don't use underscores in Go names; var byte_in should be byteIn
+corpus\rosettacode\200\odd-word-problem\odd-word-problem-3.go:29:2: don't use underscores in Go names; var byte_out should be byteOut
+corpus\rosettacode\200\parallel-calculations\parallel-calculations.go:83:1: exported function Primes should have comment or be unexported
+corpus\rosettacode\200\polymorphic-copy\polymorphic-copy.go:49:9: should omit type s from declaration of var s1; it will be inferred from the right-hand side
+corpus\rosettacode\200\polymorphic-copy\polymorphic-copy.go:50:9: should omit type r from declaration of var r1; it will be inferred from the right-hand side
+corpus\rosettacode\200\polynomial-regression\polynomial-regression-1.go:32:1: exported function Vandermonde should have comment or be unexported
+corpus\rosettacode\200\power-set\power-set.go:23:1: comment on exported type Int should be of the form "Int ..." (with optional leading article)
+corpus\rosettacode\200\power-set\power-set.go:26:1: exported method Int.Eq should have comment or be unexported
+corpus\rosettacode\200\prime-decomposition\prime-decomposition.go:9:2: exported var ZERO should have comment or be unexported
+corpus\rosettacode\200\prime-decomposition\prime-decomposition.go:13:1: exported function Primes should have comment or be unexported
+corpus\rosettacode\200\priority-queue\priority-queue.go:8:6: exported type Task should have comment or be unexported
+corpus\rosettacode\200\priority-queue\priority-queue.go:13:6: exported type TaskPQ should have comment or be unexported
+corpus\rosettacode\200\priority-queue\priority-queue.go:15:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\priority-queue\priority-queue.go:16:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\priority-queue\priority-queue.go:19:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\priority-queue\priority-queue.go:20:1: exported method TaskPQ.Push should have comment or be unexported
+corpus\rosettacode\200\priority-queue\priority-queue.go:20:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\priority-queue\priority-queue.go:21:1: exported method TaskPQ.Pop should have comment or be unexported
+corpus\rosettacode\200\priority-queue\priority-queue.go:21:1: receiver name should be a reflection of its identity; don't use generic names such as "this" or "self"
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:47:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:52:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:57:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:62:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:67:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\quaternion-type\quaternion-type.go:72:1: receiver name z should be consistent with previous receiver name q for qtn
+corpus\rosettacode\200\range-extraction\range-extraction.go:45:15: should replace errors.New(fmt.Sprintf(...)) with fmt.Errorf(...)
+corpus\rosettacode\200\range-extraction\range-extraction.go:49:15: should replace errors.New(fmt.Sprintf(...)) with fmt.Errorf(...)
+corpus\rosettacode\200\ranking-methods\ranking-methods.go:13:1: exported function StandardRank should have comment or be unexported
+corpus\rosettacode\200\ranking-methods\ranking-methods.go:25:1: exported function ModifiedRank should have comment or be unexported
+corpus\rosettacode\200\ranking-methods\ranking-methods.go:37:1: exported function DenseRank should have comment or be unexported
+corpus\rosettacode\200\ranking-methods\ranking-methods.go:49:1: exported function OrdinalRank should have comment or be unexported
+corpus\rosettacode\200\ranking-methods\ranking-methods.go:57:1: exported function FractionalRank should have comment or be unexported
+corpus\rosettacode\200\remove-duplicate-elements\remove-duplicate-elements-1.go:6:2: don't use underscores in Go names; var unique_set should be uniqueSet
+corpus\rosettacode\200\remove-duplicate-elements\remove-duplicate-elements-2.go:6:2: don't use underscores in Go names; var unique_set should be uniqueSet
+corpus\rosettacode\200\remove-duplicate-elements\remove-duplicate-elements-3.go:9:2: don't use underscores in Go names; var unique_set should be uniqueSet
+corpus\rosettacode\200\remove-duplicate-elements\remove-duplicate-elements-4.go:47:6: exported type MyType should have comment or be unexported
+corpus\rosettacode\200\remove-lines-from-a-file\remove-lines-from-a-file.go:19:21: error strings should not be capitalized or end with punctuation or a newline
+corpus\rosettacode\200\remove-lines-from-a-file\remove-lines-from-a-file.go:22:21: error strings should not be capitalized or end with punctuation or a newline
+corpus\rosettacode\200\rendezvous\rendezvous.go:57:5: error var eOutOfInk should have name of the form errFoo
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:6:2: exported const S should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:23:6: don't use underscores in Go names; func set_boundary should be setBoundary
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:30:6: don't use underscores in Go names; func calc_diff should be calcDiff
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:82:5: should replace t += 1 with t++
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:85:5: should replace t += 1 with t++
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:88:5: should replace t += 1 with t++
+corpus\rosettacode\200\resistor-mesh\resistor-mesh.go:91:5: should replace t += 1 with t++
+corpus\rosettacode\200\send-email\send-email.go:15:6: exported type Message should have comment or be unexported
+corpus\rosettacode\200\send-email\send-email.go:23:1: exported method Message.Bytes should have comment or be unexported
+corpus\rosettacode\200\send-email\send-email.go:36:1: exported method Message.Send should have comment or be unexported
+corpus\rosettacode\200\simple-database\simple-database.go:14:1: comment on exported type Item should be of the form "Item ..." (with optional leading article)
+corpus\rosettacode\200\solve-the-no-connection-puzzle\solve-the-no-connection-puzzle.go:53:20: exported func Solution returns unexported type *main.pegs, which can be annoying to use
+corpus\rosettacode\200\sparkline-in-unicode\sparkline-in-unicode.go:44:21: error strings should not be capitalized or end with punctuation or a newline
+corpus\rosettacode\200\sparkline-in-unicode\sparkline-in-unicode.go:46:21: error strings should not be capitalized or end with punctuation or a newline
+corpus\rosettacode\200\sum-digits-of-an-integer\sum-digits-of-an-integer-1.go:10:1: exported function SumString should have comment or be unexported
+corpus\rosettacode\200\sum-digits-of-an-integer\sum-digits-of-an-integer-1.go:24:1: exported function Sum should have comment or be unexported
+corpus\rosettacode\200\sum-digits-of-an-integer\sum-digits-of-an-integer-1.go:32:1: exported function SumBig should have comment or be unexported
+corpus\rosettacode\200\sum-digits-of-an-integer\sum-digits-of-an-integer-2.go:22:1: exported function TestSumString should have comment or be unexported
+corpus\rosettacode\200\sum-digits-of-an-integer\sum-digits-of-an-integer-2.go:35:1: exported function TestErrors should have comment or be unexported
+corpus\rosettacode\200\test-a-function\test-a-function.go:5:1: exported function TestPals should have comment or be unexported
+corpus\rosettacode\200\test-a-function\test-a-function.go:20:1: exported function TestNonPals should have comment or be unexported
+corpus\rosettacode\200\textonyms\textonyms.go:60:6: exported type Textonym should have comment or be unexported
+corpus\rosettacode\200\textonyms\textonyms.go:67:1: exported function NewTextonym should have comment or be unexported
+corpus\rosettacode\200\textonyms\textonyms.go:77:1: exported method Textonym.ReadFrom should have comment or be unexported
+corpus\rosettacode\200\textonyms\textonyms.go:112:1: exported method Textonym.Most should have comment or be unexported
+corpus\rosettacode\200\textonyms\textonyms.go:126:1: exported method Textonym.Report should have comment or be unexported
+corpus\rosettacode\200\top-rank-per-group\top-rank-per-group.go:8:1: comment on exported type Employee should be of the form "Employee ..." (with optional leading article)
+corpus\rosettacode\200\top-rank-per-group\top-rank-per-group.go:15:6: exported type EmployeeList should have comment or be unexported
+corpus\rosettacode\200\top-rank-per-group\top-rank-per-group.go:45:6: exported type By should have comment or be unexported
+corpus\rosettacode\200\top-rank-per-group\top-rank-per-group.go:51:1: exported method By.Sort should have comment or be unexported
+corpus\rosettacode\200\top-rank-per-group\top-rank-per-group.go:56:1: comment on exported method EmployeeList.TopSalariesByDept should be of the form "TopSalariesByDept ..."
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:15:6: exported type Circle should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:17:1: exported function NewCircle should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:22:1: exported method Circle.ContainsPt should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:26:1: exported method Circle.ContainsC should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:30:1: exported method Circle.ContainsR should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:38:1: exported method Circle.North should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:39:1: exported method Circle.South should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:40:1: exported method Circle.West should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:41:1: exported method Circle.East should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:43:6: exported type Rect should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:45:1: exported method Rect.Area should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:46:1: exported method Rect.NW should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:47:1: exported method Rect.NE should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:48:1: exported method Rect.SW should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:49:1: exported method Rect.SE should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:51:1: exported method Rect.Centre should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:55:1: exported method Rect.ContainsPt should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:60:1: exported method Rect.ContainsPC should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:67:1: exported method Rect.MinSide should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:76:6: exported type CircleSet should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:83:1: exported method CircleSet.RemoveContainedC should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:83:1: receiver name sp should be consistent with previous receiver name s for CircleSet
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:99:1: exported method CircleSet.Bounds should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:115:1: exported method CircleSet.UnionArea should have comment or be unexported
+corpus\rosettacode\200\total-circles-area\total-circles-area.go:164:1: exported method CircleSet.CategorizeR should have comment or be unexported
+corpus\rosettacode\200\visualize-a-tree\visualize-a-tree-1.go:9:6: exported type Node should have comment or be unexported
+corpus\rosettacode\200\visualize-a-tree\visualize-a-tree-2.go:10:6: exported type Node should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:11:6: exported type HouseSet should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:12:6: exported type House should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:19:6: exported type Nationality should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:20:6: exported type Colour should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:21:6: exported type Animal should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:22:6: exported type Drink should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:23:6: exported type Smoke should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:28:2: exported const English should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:35:2: exported const Red should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:42:2: exported const Dog should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:49:2: exported const Tea should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:56:2: exported const PallMall should have comment (or a comment on this block) or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:185:1: exported method House.Valid should have comment or be unexported
+corpus\rosettacode\200\zebra-puzzle\zebra-puzzle.go:237:1: exported method HouseSet.Valid should have comment or be unexported
