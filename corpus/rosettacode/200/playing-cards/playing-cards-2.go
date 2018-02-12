@@ -28,8 +28,8 @@ func main() {
 
 	ans := h.Contains(cards.NewCard(cards.Queen, cards.Spade))
 	fmt.Println("Drawn cards include the Queen of Spades?", ans)
-        ans = h.Contains(cards.NewCard(cards.Jack, cards.Spade))
-        fmt.Println("Drawn cards include the Jack of Spades?", ans)
+	ans = h.Contains(cards.NewCard(cards.Jack, cards.Spade))
+	fmt.Println("Drawn cards include the Jack of Spades?", ans)
 
 	p, _ := d.Deal(7, nil, nil)
 	fmt.Println("\nDealing 7 cards to two players")

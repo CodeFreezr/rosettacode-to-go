@@ -51,7 +51,7 @@ func outOfOrder(n int) ordering {
 	}
 	r := make(ordering, n)
 	for {
-		for i, _ := range r {
+		for i := range r {
 			r[i].color = rand.Intn(nColors)
 		}
 		if !r.ordered() {

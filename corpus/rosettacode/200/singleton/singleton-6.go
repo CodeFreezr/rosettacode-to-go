@@ -1,12 +1,12 @@
 package blue
 
 import (
-    "log"
+	"log"
 
-    "single"
+	"single"
 )
 
 func SetColor() {
-    log.Println("trying to set blue")
-    single.SetColor("blue")
+	log.Println("trying to set blue")
+	single.SetColor("blue")
 }

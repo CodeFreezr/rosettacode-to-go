@@ -30,7 +30,7 @@ func main() {
 
 	// compute observed difference, as an intermediate result
 	a := make([]int, len(tr))
-	for i, _ := range a {
+	for i := range a {
 		a[i] = i
 	}
 	sdObs := sd(a)

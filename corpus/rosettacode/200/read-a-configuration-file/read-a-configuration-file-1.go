@@ -1,12 +1,12 @@
 package config
 
 import (
-	"errors"
-	"io"
-	"fmt"
 	"bytes"
-	"strings"
+	"errors"
+	"fmt"
+	"io"
 	"io/ioutil"
+	"strings"
 )
 
 var (

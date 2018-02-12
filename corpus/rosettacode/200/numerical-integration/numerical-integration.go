@@ -16,11 +16,11 @@ type spec struct {
 
 // test cases per task description
 var data = []spec{
-	spec{0, 1, 100, .25, "x^3", func(x float64) float64 { return x * x * x }},
-	spec{1, 100, 1000, float64(math.Log(100)), "1/x",
+	{0, 1, 100, .25, "x^3", func(x float64) float64 { return x * x * x }},
+	{1, 100, 1000, float64(math.Log(100)), "1/x",
 		func(x float64) float64 { return 1 / x }},
-	spec{0, 5000, 5e5, 12.5e6, "x", func(x float64) float64 { return x }},
-	spec{0, 6000, 6e6, 18e6, "x", func(x float64) float64 { return x }},
+	{0, 5000, 5e5, 12.5e6, "x", func(x float64) float64 { return x }},
+	{0, 6000, 6e6, 18e6, "x", func(x float64) float64 { return x }},
 }
 
 // object for associating a printable function name with an integration method
@@ -31,11 +31,11 @@ type method struct {
 
 // integration methods implemented per task description
 var methods = []method{
-	method{"Rectangular (left)    ", rectLeft},
-	method{"Rectangular (right)   ", rectRight},
-	method{"Rectangular (midpoint)", rectMid},
-	method{"Trapezium             ", trap},
-	method{"Simpson's             ", simpson},
+	{"Rectangular (left)    ", rectLeft},
+	{"Rectangular (right)   ", rectRight},
+	{"Rectangular (midpoint)", rectMid},
+	{"Trapezium             ", trap},
+	{"Simpson's             ", simpson},
 }
 
 func rectLeft(t spec) float64 {

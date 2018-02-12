@@ -32,8 +32,8 @@ func main() {
 	}
 
 	var testdata []pair = []pair{
-		pair{33, 77},
-		pair{49865, 69811},
+		{33, 77},
+		{49865, 69811},
 	}
 
 	for _, v := range testdata {

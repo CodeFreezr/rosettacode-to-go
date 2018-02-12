@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("Delay:", d)
 	t := time.NewTicker(d)
 	i := 1
-	for _ = range t.C {
+	for range t.C {
 		i--
 		if i == 0 {
 			i = bpb

@@ -20,26 +20,26 @@ const msg = "Here am I"
 
 //export Query
 func Query(buffer *C.char, length *C.size_t) C.int {
-        // Check there is enough space in the buffer
-        if int(*length) < len(msg) {
-                return 0
-        }
+	// Check there is enough space in the buffer
+	if int(*length) < len(msg) {
+		return 0
+	}
 
-        // Wrap the buffer in a slice to make it easier to copy into
-        sliceHeader := reflect.SliceHeader {
-                Data: uintptr(unsafe.Pointer(buffer)),
-                Len: len(msg),
-                Cap: len(msg),
-        }
-        bufferSlice := *(*[]byte)(unsafe.Pointer(&sliceHeader))
+	// Wrap the buffer in a slice to make it easier to copy into
+	sliceHeader := reflect.SliceHeader{
+		Data: uintptr(unsafe.Pointer(buffer)),
+		Len:  len(msg),
+		Cap:  len(msg),
+	}
+	bufferSlice := *(*[]byte)(unsafe.Pointer(&sliceHeader))
 
-        // Iterate through the message and copy it to the buffer, byte by byte
-        for i:=0;i<len(msg);i++ {
-                bufferSlice[i] = msg[i]
-        }
+	// Iterate through the message and copy it to the buffer, byte by byte
+	for i := 0; i < len(msg); i++ {
+		bufferSlice[i] = msg[i]
+	}
 
-        // Set length to the amount of bytes we copied
-        (*length) = C.size_t(len(msg))
+	// Set length to the amount of bytes we copied
+	(*length) = C.size_t(len(msg))
 
-        return 1
+	return 1
 }

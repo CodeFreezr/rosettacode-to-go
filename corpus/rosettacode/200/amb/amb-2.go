@@ -21,7 +21,7 @@ func amb(wordsets [][]string, res []string) bool {
 			continue
 		}
 
-		if amb(wordsets[1:len(wordsets)], res) {
+		if amb(wordsets[1:], res) {
 			return true
 		}
 	}

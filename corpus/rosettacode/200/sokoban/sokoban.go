@@ -32,7 +32,7 @@ func solve(board string) string {
 		{"l", "L", -1},
 	}
 	visited := map[string]bool{board: true}
-	open := []state{state{board, "", strings.Index(board, "@")}}
+	open := []state{{board, "", strings.Index(board, "@")}}
 	for len(open) > 0 {
 		s1 := &open[0]
 		open = open[1:]

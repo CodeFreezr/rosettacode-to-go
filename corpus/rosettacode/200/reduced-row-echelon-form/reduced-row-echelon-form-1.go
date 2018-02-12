@@ -43,7 +43,7 @@ func rref(m matrix) {
 		}
 		m[i], m[r] = m[r], m[i]
 		f := 1 / m[r][lead]
-		for j, _ := range m[r] {
+		for j := range m[r] {
 			m[r][j] *= f
 		}
 		for i = 0; i < rowCount; i++ {

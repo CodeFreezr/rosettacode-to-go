@@ -23,7 +23,7 @@ func printMatrix(m matrix) {
 
 func transpose(m matrix) matrix {
 	r := make(matrix, len(m[0]))
-	for x, _ := range r {
+	for x := range r {
 		r[x] = make(row, len(m))
 	}
 	for y, s := range m {

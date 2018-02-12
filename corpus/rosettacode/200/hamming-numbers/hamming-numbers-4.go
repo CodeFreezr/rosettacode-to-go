@@ -122,7 +122,7 @@ func main() {
 	n := uint(1e6)
 
 	rarr := make([]*big.Int, 20)
-	for i, _ := range rarr {
+	for i := range rarr {
 		rarr[i] = log_nodumps_hamming(i)
 	}
 	fmt.Println(rarr)

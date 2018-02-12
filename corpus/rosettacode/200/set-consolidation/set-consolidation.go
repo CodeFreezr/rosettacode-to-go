@@ -5,11 +5,11 @@ import "fmt"
 type set map[string]bool
 
 var testCase = []set{
-	set{"H": true, "I": true, "K": true},
-	set{"A": true, "B": true},
-	set{"C": true, "D": true},
-	set{"D": true, "B": true},
-	set{"F": true, "G": true, "H": true},
+	{"H": true, "I": true, "K": true},
+	{"A": true, "B": true},
+	{"C": true, "D": true},
+	{"D": true, "B": true},
+	{"F": true, "G": true, "H": true},
 }
 
 func main() {

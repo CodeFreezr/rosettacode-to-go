@@ -63,7 +63,7 @@ func (m *maze) String() string {
 		}
 		b = append(b, rightWall...)
 	}
-	for _ = range m.h2[0] {
+	for range m.h2[0] {
 		b = append(b, hWall...)
 	}
 	b = append(b, rightCorner...)

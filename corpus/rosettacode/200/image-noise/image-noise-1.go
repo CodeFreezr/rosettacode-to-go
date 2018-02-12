@@ -82,6 +82,6 @@ func main() {
 		}
 	}()
 
-	for _ = range win.EventChan() {
+	for range win.EventChan() {
 	}
 }

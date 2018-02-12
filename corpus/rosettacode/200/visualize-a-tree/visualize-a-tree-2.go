@@ -14,13 +14,13 @@ type Node struct {
 
 func main() {
 	tree := &Node{"root", []*Node{
-		&Node{"a", []*Node{
-			&Node{"d", nil},
-			&Node{"e", []*Node{
-				&Node{"f", nil},
+		{"a", []*Node{
+			{"d", nil},
+			{"e", []*Node{
+				{"f", nil},
 			}}}},
-		&Node{"b", nil},
-		&Node{"c", nil},
+		{"b", nil},
+		{"c", nil},
 	}}
 	enc := toml.NewEncoder(os.Stdout)
 	enc.Indent = "   "
