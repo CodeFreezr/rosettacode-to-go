@@ -6,15 +6,15 @@ package example
 
 // Exported variables.
 var (
-    // lookie
-    X, Y, Z int // popular names
+	// lookie
+	X, Y, Z int // popular names
 )
 
 /* XP does nothing.
 
 Here's a block comment. */
 func XP() { // here we go!
-    // comments inside
+	// comments inside
 }
 
 // Non-exported.

@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	cardinality := func (i int) string {
-		if i!=1 {
+	cardinality := func(i int) string {
+		if i != 1 {
 			return "s"
 		}
 		return ""

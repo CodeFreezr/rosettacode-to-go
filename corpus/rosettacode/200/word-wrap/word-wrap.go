@@ -1,27 +1,27 @@
 package main
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
 func wrap(text string, lineWidth int) (wrapped string) {
-    words := strings.Fields(text)
-    if len(words) == 0 {
-        return
-    }
-    wrapped = words[0]
-    spaceLeft := lineWidth - len(wrapped)
-    for _, word := range words[1:] {
-        if len(word)+1 > spaceLeft {
-            wrapped += "\n" + word
-            spaceLeft = lineWidth - len(word)
-        } else {
-            wrapped += " " + word
-            spaceLeft -= 1 + len(word)
-        }
-    }
-    return
+	words := strings.Fields(text)
+	if len(words) == 0 {
+		return
+	}
+	wrapped = words[0]
+	spaceLeft := lineWidth - len(wrapped)
+	for _, word := range words[1:] {
+		if len(word)+1 > spaceLeft {
+			wrapped += "\n" + word
+			spaceLeft = lineWidth - len(word)
+		} else {
+			wrapped += " " + word
+			spaceLeft -= 1 + len(word)
+		}
+	}
+	return
 }
 
 var frog = `
@@ -36,8 +36,8 @@ took a golden ball, and threw it up on high and caught it, and this
 ball was her favorite plaything.`
 
 func main() {
-    fmt.Println("wrapped at 80:")
-    fmt.Println(wrap(frog, 80))
-    fmt.Println("wrapped at 72:")
-    fmt.Println(wrap(frog, 72))
+	fmt.Println("wrapped at 80:")
+	fmt.Println(wrap(frog, 80))
+	fmt.Println("wrapped at 72:")
+	fmt.Println(wrap(frog, 72))
 }

@@ -3,31 +3,31 @@ package main
 import "fmt"
 
 type point struct {
-    x, y float64
+	x, y float64
 }
 
 type circle struct {
-    x, y, r float64
+	x, y, r float64
 }
 
 type printer interface {
-    print()
+	print()
 }
 
 func (p *point) print() {
-    fmt.Println(p.x, p.y)
+	fmt.Println(p.x, p.y)
 }
 
 func (c *circle) print() {
-    fmt.Println(c.x, c.y, c.r)
+	fmt.Println(c.x, c.y, c.r)
 }
 
 func main() {
-    var i printer            // polymorphic variable
-    i = newPoint(3, 4)       // assign one type
-    i.print()                // call polymorphic function
-    i = newCircle(5, 12, 13) // assign different type to same variable
-    i.print()                // same call accesses different method now.
+	var i printer            // polymorphic variable
+	i = newPoint(3, 4)       // assign one type
+	i.print()                // call polymorphic function
+	i = newCircle(5, 12, 13) // assign different type to same variable
+	i.print()                // same call accesses different method now.
 }
 
 // Above is a sort of polymorphism: both types implement the printer
@@ -72,10 +72,10 @@ func (c *circle) set(d *circle) { *c = *d }
 // name a function New, New<Type>, or within a package, new<Type>
 // as shown here.
 func newPoint(x, y float64) *point {
-    return &point{x, y}
+	return &point{x, y}
 }
 func newCircle(x, y, r float64) *circle {
-    return &circle{x, y, r}
+	return &circle{x, y, r}
 }
 
 // Destructors are never used in Go.  Objects are garbage collected.

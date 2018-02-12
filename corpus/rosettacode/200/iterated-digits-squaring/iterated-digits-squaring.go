@@ -12,15 +12,17 @@ func main() {
 		for {
 			u = 0
 			for {
-				d = o%10
+				d = o % 10
 				o = (o - d) / 10
-				u += d*d
+				u += d * d
 				if o == 0 {
 					break
 				}
 			}
 			if u == 89 || u == 1 {
-				if u == 89 { u89++ }
+				if u == 89 {
+					u89++
+				}
 				break
 			}
 			o = u

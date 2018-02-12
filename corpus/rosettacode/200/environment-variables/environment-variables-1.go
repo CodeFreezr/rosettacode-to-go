@@ -1,10 +1,10 @@
 package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
 func main() {
-    fmt.Println(os.Getenv("SHELL"))
+	fmt.Println(os.Getenv("SHELL"))
 }

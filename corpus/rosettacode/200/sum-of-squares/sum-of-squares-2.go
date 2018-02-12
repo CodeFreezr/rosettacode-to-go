@@ -1,13 +1,13 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "github.com/gonum/floats"
+	"github.com/gonum/floats"
 )
 
 var v = []float64{1, 2, .5}
 
 func main() {
-    fmt.Println(floats.Dot(v, v))
+	fmt.Println(floats.Dot(v, v))
 }

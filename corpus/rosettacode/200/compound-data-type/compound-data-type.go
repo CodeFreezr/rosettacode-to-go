@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 type point struct {
-    x, y float64
+	x, y float64
 }
 
 func main() {
-    fmt.Println(point{3, 4})
+	fmt.Println(point{3, 4})
 }

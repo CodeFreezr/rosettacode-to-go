@@ -13,67 +13,67 @@ import "fmt"
 
 // argument validation
 func d(b byte) byte {
-    if b < '0' || b > '9' {
-        panic("digit 0-9 expected")
-    }
-    return b - '0'
+	if b < '0' || b > '9' {
+		panic("digit 0-9 expected")
+	}
+	return b - '0'
 }
 
 // add two numbers as strings
 func add(x, y string) string {
-    if len(y) > len(x) {
-        x, y = y, x
-    }
-    b := make([]byte, len(x)+1)
-    var c byte
-    for i := 1; i <= len(x); i++ {
-        if i <= len(y) {
-            c += d(y[len(y)-i])
-        }
-        s := d(x[len(x)-i]) + c
-        c = s / 10
-        b[len(b)-i] = (s % 10) + '0'
-    }
-    if c == 0 {
-        return string(b[1:])
-    }
-    b[0] = c + '0'
-    return string(b)
+	if len(y) > len(x) {
+		x, y = y, x
+	}
+	b := make([]byte, len(x)+1)
+	var c byte
+	for i := 1; i <= len(x); i++ {
+		if i <= len(y) {
+			c += d(y[len(y)-i])
+		}
+		s := d(x[len(x)-i]) + c
+		c = s / 10
+		b[len(b)-i] = (s % 10) + '0'
+	}
+	if c == 0 {
+		return string(b[1:])
+	}
+	b[0] = c + '0'
+	return string(b)
 }
 
 // multipy a number by a single digit
 func mulDigit(x string, y byte) string {
-    if y == '0' {
-        return "0"
-    }
-    y = d(y)
-    b := make([]byte, len(x)+1)
-    var c byte
-    for i := 1; i <= len(x); i++ {
-        s := d(x[len(x)-i])*y + c
-        c = s / 10
-        b[len(b)-i] = (s % 10) + '0'
-    }
-    if c == 0 {
-        return string(b[1:])
-    }
-    b[0] = c + '0'
-    return string(b)
+	if y == '0' {
+		return "0"
+	}
+	y = d(y)
+	b := make([]byte, len(x)+1)
+	var c byte
+	for i := 1; i <= len(x); i++ {
+		s := d(x[len(x)-i])*y + c
+		c = s / 10
+		b[len(b)-i] = (s % 10) + '0'
+	}
+	if c == 0 {
+		return string(b[1:])
+	}
+	b[0] = c + '0'
+	return string(b)
 }
 
 // multiply two numbers as strings
 func mul(x, y string) string {
-    result := mulDigit(x, y[len(y)-1])
-    for i, zeros := 2, ""; i <= len(y); i++ {
-        zeros += "0"
-        result = add(result, mulDigit(x, y[len(y)-i])+zeros)
-    }
-    return result
+	result := mulDigit(x, y[len(y)-1])
+	for i, zeros := 2, ""; i <= len(y); i++ {
+		zeros += "0"
+		result = add(result, mulDigit(x, y[len(y)-i])+zeros)
+	}
+	return result
 }
 
 // requested output
 const n = "18446744073709551616"
 
 func main() {
-    fmt.Println(mul(n, n))
+	fmt.Println(mul(n, n))
 }

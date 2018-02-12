@@ -102,7 +102,7 @@ func parseLine(s string) line {
 
 // Config represents a "standard" configuration file.
 type Config struct {
-	options map[string]int		// index of each option in lines.
+	options map[string]int // index of each option in lines.
 	lines   []line
 }
 

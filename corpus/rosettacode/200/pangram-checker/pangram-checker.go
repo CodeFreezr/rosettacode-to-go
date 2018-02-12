@@ -3,17 +3,17 @@ package main
 import "fmt"
 
 func main() {
-    for _, s := range []string{
-        "The quick brown fox jumps over the lazy dog.",
-        `Watch "Jeopardy!", Alex Trebek's fun TV quiz game.`,
-        "Not a pangram.",
-    } {
-        if pangram(s) {
-            fmt.Println("Yes:", s)
-        } else {
-            fmt.Println("No: ", s)
-        }
-    }
+	for _, s := range []string{
+		"The quick brown fox jumps over the lazy dog.",
+		`Watch "Jeopardy!", Alex Trebek's fun TV quiz game.`,
+		"Not a pangram.",
+	} {
+		if pangram(s) {
+			fmt.Println("Yes:", s)
+		} else {
+			fmt.Println("No: ", s)
+		}
+	}
 }
 
 func pangram(s string) bool {

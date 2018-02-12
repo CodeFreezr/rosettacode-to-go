@@ -1,6 +1,10 @@
 package main
-import ("fmt"; "time")
+
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-    fmt.Println(time.Time{})
+	fmt.Println(time.Time{})
 }

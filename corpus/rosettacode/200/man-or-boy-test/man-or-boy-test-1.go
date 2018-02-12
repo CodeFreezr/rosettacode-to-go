@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func a(k int, x1, x2, x3, x4, x5 func() int) int {
