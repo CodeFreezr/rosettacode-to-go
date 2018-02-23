@@ -2,7 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/CodeFreezr/rosettacode-to-go)](https://goreportcard.com/report/github.com/CodeFreezr/rosettacode-to-go)  
 
-![The Stone of Rosetta in Code](rosettacode.png)
+[![The Stone of Rosetta in Code](rosettacode.png)](http://rosettacode.org)
 
 Rosette Code Go Sources
 
