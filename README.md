@@ -6,8 +6,8 @@
 
 Rosette Code Go Sources
 
-What have we done:  
+What we have done:  
 1. Download from https://github.com/acmeism/RosettaCodeData   
 2. Added sloc  
-3. Append File & Folder  
+3. Append File & Folder to the go-files  
 4. go fmt -s -w .
