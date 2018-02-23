@@ -1,14 +1,14 @@
 package main
 
 import (
-    "fmt"
-    "singlep"
+	"fmt"
+	"singlep"
 )
 
 func main() {
-    // dot selector syntax references package variables and functions
-    fmt.Println(singlep.X, singlep.Y)
-    fmt.Println(singlep.F())
+	// dot selector syntax references package variables and functions
+	fmt.Println(singlep.X, singlep.Y)
+	fmt.Println(singlep.F())
 }
 
 //\Singleton\singleton-3.go

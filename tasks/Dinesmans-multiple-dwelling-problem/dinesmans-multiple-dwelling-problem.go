@@ -28,49 +28,49 @@ type assignments map[string]int
 // package level defintions, such as top and bottom.  A function returns false
 // to say the assignments are invalid.
 var rules = []func(assignments) bool{
-    // Baker does not live on the top floor
-    func(a assignments) bool {
-        floor, assigned := a["Baker"]
-        return !assigned || floor != top
-    },
-    // Cooper does not live on the bottom floor
-    func(a assignments) bool {
-        floor, assigned := a["Cooper"]
-        return !assigned || floor != bottom
-    },
-    // Fletcher does not live on either the top or the bottom floor
-    func(a assignments) bool {
-        floor, assigned := a["Fletcher"]
-        return !assigned || (floor != top && floor != bottom)
-    },
-    // Miller lives on a higher floor than does Cooper
-    func(a assignments) bool {
-        if m, assigned := a["Miller"]; assigned {
-            c, assigned := a["Cooper"]
-            return !assigned || m > c
-        }
-        return true
-    },
-    // Smith does not live on a floor adjacent to Fletcher's
-    func(a assignments) bool {
-        if s, assigned := a["Smith"]; assigned {
-            if f, assigned := a["Fletcher"]; assigned {
-                d := s - f
-                return d*d > 1
-            }
-        }
-        return true
-    },
-    // Fletcher does not live on a floor adjacent to Cooper's
-    func(a assignments) bool {
-        if f, assigned := a["Fletcher"]; assigned {
-            if c, assigned := a["Cooper"]; assigned {
-                d := f - c
-                return d*d > 1
-            }
-        }
-        return true
-    },
+	// Baker does not live on the top floor
+	func(a assignments) bool {
+		floor, assigned := a["Baker"]
+		return !assigned || floor != top
+	},
+	// Cooper does not live on the bottom floor
+	func(a assignments) bool {
+		floor, assigned := a["Cooper"]
+		return !assigned || floor != bottom
+	},
+	// Fletcher does not live on either the top or the bottom floor
+	func(a assignments) bool {
+		floor, assigned := a["Fletcher"]
+		return !assigned || (floor != top && floor != bottom)
+	},
+	// Miller lives on a higher floor than does Cooper
+	func(a assignments) bool {
+		if m, assigned := a["Miller"]; assigned {
+			c, assigned := a["Cooper"]
+			return !assigned || m > c
+		}
+		return true
+	},
+	// Smith does not live on a floor adjacent to Fletcher's
+	func(a assignments) bool {
+		if s, assigned := a["Smith"]; assigned {
+			if f, assigned := a["Fletcher"]; assigned {
+				d := s - f
+				return d*d > 1
+			}
+		}
+		return true
+	},
+	// Fletcher does not live on a floor adjacent to Cooper's
+	func(a assignments) bool {
+		if f, assigned := a["Fletcher"]; assigned {
+			if c, assigned := a["Cooper"]; assigned {
+				d := f - c
+				return d*d > 1
+			}
+		}
+		return true
+	},
 }
 
 // Assignment program, do not change.  The algorithm is a depth first search,
@@ -83,42 +83,42 @@ var rules = []func(assignments) bool{
 // assigned to different floors.  These rules are hard coded here and do not
 // need to be coded in the the rules list above.
 func main() {
-    a := assignments{}
-    var occ [top + 1]bool
-    var df func([]string) bool
-    df = func(u []string) bool {
-        if len(u) == 0 {
-            return true
-        }
-        tn := u[0]
-        u = u[1:]
-    f:
-        for f := bottom; f <= top; f++ {
-            if !occ[f] {
-                a[tn] = f
-                for _, r := range rules {
-                    if !r(a) {
-                        delete(a, tn)
-                        continue f
-                    }
-                }
-                occ[f] = true
-                if df(u) {
-                    return true
-                }
-                occ[f] = false
-                delete(a, tn)
-            }
-        }
-        return false
-    }
-    if !df(tenants) {
-        fmt.Println("no solution")
-        return
-    }
-    for t, f := range a {
-        fmt.Println(t, f)
-    }
+	a := assignments{}
+	var occ [top + 1]bool
+	var df func([]string) bool
+	df = func(u []string) bool {
+		if len(u) == 0 {
+			return true
+		}
+		tn := u[0]
+		u = u[1:]
+	f:
+		for f := bottom; f <= top; f++ {
+			if !occ[f] {
+				a[tn] = f
+				for _, r := range rules {
+					if !r(a) {
+						delete(a, tn)
+						continue f
+					}
+				}
+				occ[f] = true
+				if df(u) {
+					return true
+				}
+				occ[f] = false
+				delete(a, tn)
+			}
+		}
+		return false
+	}
+	if !df(tenants) {
+		fmt.Println("no solution")
+		return
+	}
+	for t, f := range a {
+		fmt.Println(t, f)
+	}
 }
 
 //\Dinesmans-multiple-dwelling-problem\dinesmans-multiple-dwelling-problem.go

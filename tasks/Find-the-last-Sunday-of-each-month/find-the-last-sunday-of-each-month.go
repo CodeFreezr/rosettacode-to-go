@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	
+
 	var year int
 	var t time.Time
-	var lastDay = [12]int { 31,29,31,30,31,30,31,31,30,31,30,31 }
-	
+	var lastDay = [12]int{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+
 	for {
 		fmt.Print("Please select a year: ")
 		_, err := fmt.Scanf("%d", &year)
@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("Last Sundays of each month of", year)
 	fmt.Println("==================================")
 
-	for i := 1;i < 13; i++ {
+	for i := 1; i < 13; i++ {
 		j := lastDay[i-1]
 		if i == 2 {
 			if time.Date(int(year), time.Month(i), j, 0, 0, 0, 0, time.UTC).Month() == time.Date(int(year), time.Month(i), j-1, 0, 0, 0, 0, time.UTC).Month() {

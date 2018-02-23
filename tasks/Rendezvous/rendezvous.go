@@ -1,10 +1,10 @@
 package main
 
 import (
-    "errors"
-    "fmt"
-    "strings"
-    "sync"
+	"errors"
+	"fmt"
+	"strings"
+	"sync"
 )
 
 var hdText = `Humpty Dumpty sat on a wall.
@@ -22,13 +22,13 @@ And mounting its back,
 Flew up to the moon.`
 
 func main() {
-    reservePrinter := startMonitor(newPrinter(5), nil)
-    mainPrinter := startMonitor(newPrinter(5), reservePrinter)
-    var busy sync.WaitGroup
-    busy.Add(2)
-    go writer(mainPrinter, "hd", hdText, &busy)
-    go writer(mainPrinter, "mg", mgText, &busy)
-    busy.Wait()
+	reservePrinter := startMonitor(newPrinter(5), nil)
+	mainPrinter := startMonitor(newPrinter(5), reservePrinter)
+	var busy sync.WaitGroup
+	busy.Add(2)
+	go writer(mainPrinter, "hd", hdText, &busy)
+	go writer(mainPrinter, "mg", mgText, &busy)
+	busy.Wait()
 }
 
 // printer is a type representing an abstraction of a physical printer.
@@ -41,17 +41,17 @@ type printer func(string) error
 // Note that this is not creating the monitor, only the object serving as
 // a physical printer by writing to standard output.
 func newPrinter(ink int) printer {
-    return func(line string) error {
-        if ink == 0 {
-            return eOutOfInk
-        }
-        for _, c := range line {
-            fmt.Printf("%c", c)
-        }
-        fmt.Println()
-        ink--
-        return nil
-    }
+	return func(line string) error {
+		if ink == 0 {
+			return eOutOfInk
+		}
+		for _, c := range line {
+			fmt.Printf("%c", c)
+		}
+		fmt.Println()
+		ink--
+		return nil
+	}
 }
 
 var eOutOfInk = errors.New("out of ink")
@@ -71,8 +71,8 @@ var eOutOfInk = errors.New("out of ink")
 // to the actual data.  Sending one on a channel does not involve copying,
 // or much less marshalling string data.
 type rSync struct {
-    call     chan string
-    response chan error
+	call     chan string
+	response chan error
 }
 
 // "rendezvous Print" requested by use case task.
@@ -81,41 +81,41 @@ type rSync struct {
 // received from rSync.response.  Each channel operation is synchronous.
 // The two operations back to back approximate the Ada rendezvous.
 func (r *rSync) print(data string) error {
-    r.call <- data      // blocks until data is accepted on channel
-    return <-r.response // blocks until response is received
+	r.call <- data      // blocks until data is accepted on channel
+	return <-r.response // blocks until response is received
 }
 
 // monitor is run as a goroutine.  It encapsulates the printer passed to it.
 // Print requests are received through the rSync object "entry," named entry
 // here to correspond to the Ada concept of an entry point.
 func monitor(hardPrint printer, entry, reserve *rSync) {
-    for {
-        // The monitor goroutine will block here waiting for a "call"
-        // to its "entry point."
-        data := <-entry.call
-        // Assuming the call came from a goroutine calling rSync.print,
-        // that goroutine is now blocked, waiting for this one to send
-        // a response.
+	for {
+		// The monitor goroutine will block here waiting for a "call"
+		// to its "entry point."
+		data := <-entry.call
+		// Assuming the call came from a goroutine calling rSync.print,
+		// that goroutine is now blocked, waiting for this one to send
+		// a response.
 
-        // attempt output
-        switch err := hardPrint(data); {
+		// attempt output
+		switch err := hardPrint(data); {
 
-        // consider return value from attempt
-        case err == nil:
-            entry.response <- nil // no problems
+		// consider return value from attempt
+		case err == nil:
+			entry.response <- nil // no problems
 
-        case err == eOutOfInk && reserve != nil:
-            // Requeue to "entry point" of reserve printer monitor.
-            // Caller stays blocked, and now this goroutine blocks until
-            // it gets a response from the reserve printer monitor.
-            // It then transparently relays the response to the caller.
-            entry.response <- reserve.print(data)
+		case err == eOutOfInk && reserve != nil:
+			// Requeue to "entry point" of reserve printer monitor.
+			// Caller stays blocked, and now this goroutine blocks until
+			// it gets a response from the reserve printer monitor.
+			// It then transparently relays the response to the caller.
+			entry.response <- reserve.print(data)
 
-        default:
-            entry.response <- err // return failure
-        }
-        // The response is away.  Loop, and so immediately block again.
-    }
+		default:
+			entry.response <- err // return failure
+		}
+		// The response is away.  Loop, and so immediately block again.
+	}
 }
 
 // startMonitor can be seen as an rSync constructor.  It also
@@ -124,9 +124,9 @@ func monitor(hardPrint printer, entry, reserve *rSync) {
 // unbuffered.  There is no buffer or message box to hold channel data.
 // A sender will block waiting for a receiver to accept data synchronously.
 func startMonitor(p printer, reservePrinter *rSync) *rSync {
-    entry := &rSync{make(chan string), make(chan error)}
-    go monitor(p, entry, reservePrinter)
-    return entry
+	entry := &rSync{make(chan string), make(chan error)}
+	go monitor(p, entry, reservePrinter)
+	return entry
 }
 
 // Two writer tasks are started as goroutines by main.  They run concurrently
@@ -135,13 +135,13 @@ func startMonitor(p printer, reservePrinter *rSync) *rSync {
 //    Here:           printMonitor.print(line);
 //    Ada solution:   Main.Print ("string literal");
 func writer(printMonitor *rSync, id, text string, busy *sync.WaitGroup) {
-    for _, line := range strings.Split(text, "\n") {
-        if err := printMonitor.print(line); err != nil {
-            fmt.Printf("**** writer task %q terminated: %v ****\n", id, err)
-            break
-        }
-    }
-    busy.Done()
+	for _, line := range strings.Split(text, "\n") {
+		if err := printMonitor.print(line); err != nil {
+			fmt.Printf("**** writer task %q terminated: %v ****\n", id, err)
+			break
+		}
+	}
+	busy.Done()
 }
 
 //\Rendezvous\rendezvous.go

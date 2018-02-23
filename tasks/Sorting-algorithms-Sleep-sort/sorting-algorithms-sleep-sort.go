@@ -20,7 +20,7 @@ func main() {
 			out <- n
 		}(i)
 	}
-	for _ = range os.Args[1:] {
+	for range os.Args[1:] {
 		fmt.Println(<-out)
 	}
 }

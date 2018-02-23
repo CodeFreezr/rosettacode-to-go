@@ -5,12 +5,12 @@ var X, Y int
 
 // package level initialization can serve as constructor code
 func init() {
-    X, Y = 2, 3
+	X, Y = 2, 3
 }
 
 // package level functions serve as methods for a package-as-a-singleton
 func F() int {
-    return Y - X
+	return Y - X
 }
 
 //\Singleton\singleton-2.go

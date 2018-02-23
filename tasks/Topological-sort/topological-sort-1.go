@@ -1,8 +1,8 @@
 package main
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
 var data = `
@@ -23,17 +23,17 @@ std_cell_lib     ieee std_cell_lib
 synopsys         `
 
 func main() {
-    g, in, err := parseLibComp(data)
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    order, cyclic := topSortKahn(g, in)
-    if cyclic != nil {
-        fmt.Println("Cyclic:", cyclic)
-        return
-    }
-    fmt.Println("Order:", order)
+	g, in, err := parseLibComp(data)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	order, cyclic := topSortKahn(g, in)
+	if cyclic != nil {
+		fmt.Println("Cyclic:", cyclic)
+		return
+	}
+	fmt.Println("Order:", order)
 }
 
 type graph map[string][]string
@@ -45,42 +45,42 @@ type inDegree map[string]int
 // map key n, the map elements are libraries that depend on n being compiled
 // first.
 func parseLibComp(data string) (g graph, in inDegree, err error) {
-    // small sanity check on input
-    lines := strings.Split(data, "\n")
-    if len(lines) < 3 || !strings.HasPrefix(lines[2], "=") {
-        return nil, nil, fmt.Errorf("data format")
-    }
-    // toss header lines
-    lines = lines[3:]
-    // scan and interpret input, build graph
-    g = graph{}
-    in = inDegree{}
-    for _, line := range lines {
-        libs := strings.Fields(line)
-        if len(libs) == 0 {
-            continue // allow blank lines
-        }
-        lib := libs[0]
-        g[lib] = g[lib]
-        for _, dep := range libs[1:] {
-            in[dep] = in[dep]
-            if dep == lib {
-                continue // ignore self dependencies
-            }
-            successors := g[dep]
-            for i := 0; ; i++ {
-                if i == len(successors) {
-                    g[dep] = append(successors, lib)
-                    in[lib]++
-                    break
-                }
-                if dep == successors[i] {
-                    break // ignore duplicate dependencies
-                }
-            }
-        }
-    }
-    return g, in, nil
+	// small sanity check on input
+	lines := strings.Split(data, "\n")
+	if len(lines) < 3 || !strings.HasPrefix(lines[2], "=") {
+		return nil, nil, fmt.Errorf("data format")
+	}
+	// toss header lines
+	lines = lines[3:]
+	// scan and interpret input, build graph
+	g = graph{}
+	in = inDegree{}
+	for _, line := range lines {
+		libs := strings.Fields(line)
+		if len(libs) == 0 {
+			continue // allow blank lines
+		}
+		lib := libs[0]
+		g[lib] = g[lib]
+		for _, dep := range libs[1:] {
+			in[dep] = in[dep]
+			if dep == lib {
+				continue // ignore self dependencies
+			}
+			successors := g[dep]
+			for i := 0; ; i++ {
+				if i == len(successors) {
+					g[dep] = append(successors, lib)
+					in[lib]++
+					break
+				}
+				if dep == successors[i] {
+					break // ignore duplicate dependencies
+				}
+			}
+		}
+	}
+	return g, in, nil
 }
 
 // General purpose topological sort, not specific to the application of
@@ -91,52 +91,52 @@ func parseLibComp(data string) (g graph, in inDegree, err error) {
 // WP stops at cycle detection and doesn't output information about the cycle.
 // A little extra code at the end of this function recovers the cyclic nodes.
 func topSortKahn(g graph, in inDegree) (order, cyclic []string) {
-    var L, S []string
-    // rem for "remaining edges," this function makes a local copy of the
-    // in-degrees and consumes that instead of consuming an input.
-    rem := inDegree{}
-    for n, d := range in {
-        if d == 0 {
-            // accumulate "set of all nodes with no incoming edges"
-            S = append(S, n)
-        } else {
-            // initialize rem from in-degree
-            rem[n] = d
-        }
-    }
-    for len(S) > 0 {
-        last := len(S) - 1 // "remove a node n from S"
-        n := S[last]
-        S = S[:last]
-        L = append(L, n) // "add n to tail of L"
-        for _, m := range g[n] {
-            // WP pseudo code reads "for each node m..." but it means for each
-            // node m *remaining in the graph.*  We consume rem rather than
-            // the graph, so "remaining in the graph" for us means rem[m] > 0.
-            if rem[m] > 0 {
-                rem[m]--         // "remove edge from the graph"
-                if rem[m] == 0 { // if "m has no other incoming edges"
-                    S = append(S, m) // "insert m into S"
-                }
-            }
-        }
-    }
-    // "If graph has edges," for us means a value in rem is > 0.
-    for c, in := range rem {
-        if in > 0 {
-            // recover cyclic nodes
-            for _, nb := range g[c] {
-                if rem[nb] > 0 {
-                    cyclic = append(cyclic, c)
-                    break
-                }
-            }
-        }
-    }
-    if len(cyclic) > 0 {
-        return nil, cyclic
-    }
-    return L, nil
+	var L, S []string
+	// rem for "remaining edges," this function makes a local copy of the
+	// in-degrees and consumes that instead of consuming an input.
+	rem := inDegree{}
+	for n, d := range in {
+		if d == 0 {
+			// accumulate "set of all nodes with no incoming edges"
+			S = append(S, n)
+		} else {
+			// initialize rem from in-degree
+			rem[n] = d
+		}
+	}
+	for len(S) > 0 {
+		last := len(S) - 1 // "remove a node n from S"
+		n := S[last]
+		S = S[:last]
+		L = append(L, n) // "add n to tail of L"
+		for _, m := range g[n] {
+			// WP pseudo code reads "for each node m..." but it means for each
+			// node m *remaining in the graph.*  We consume rem rather than
+			// the graph, so "remaining in the graph" for us means rem[m] > 0.
+			if rem[m] > 0 {
+				rem[m]--         // "remove edge from the graph"
+				if rem[m] == 0 { // if "m has no other incoming edges"
+					S = append(S, m) // "insert m into S"
+				}
+			}
+		}
+	}
+	// "If graph has edges," for us means a value in rem is > 0.
+	for c, in := range rem {
+		if in > 0 {
+			// recover cyclic nodes
+			for _, nb := range g[c] {
+				if rem[nb] > 0 {
+					cyclic = append(cyclic, c)
+					break
+				}
+			}
+		}
+	}
+	if len(cyclic) > 0 {
+		return nil, cyclic
+	}
+	return L, nil
 }
 
 //\Topological-sort\topological-sort-1.go

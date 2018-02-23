@@ -27,8 +27,8 @@ func main() {
 	}
 	fmt.Printf("Wrote and read: %s\n", d)
 
-        // The defer statements above will close and remove the
-        // temporary file here (or on any return of this function).
+	// The defer statements above will close and remove the
+	// temporary file here (or on any return of this function).
 }
 
 //\Secure-temporary-file\secure-temporary-file.go

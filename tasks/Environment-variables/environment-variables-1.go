@@ -1,12 +1,12 @@
 package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
 func main() {
-    fmt.Println(os.Getenv("SHELL"))
+	fmt.Println(os.Getenv("SHELL"))
 }
 
 //\Environment-variables\environment-variables-1.go

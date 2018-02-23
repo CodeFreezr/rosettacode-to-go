@@ -1,9 +1,9 @@
 package main
 
-import(
+import (
 	"fmt"
-	"unsafe"
 	"reflect"
+	"unsafe"
 )
 
 func pointer() {

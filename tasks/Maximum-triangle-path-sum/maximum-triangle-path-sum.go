@@ -1,9 +1,9 @@
 package main
 
 import (
-    "fmt"
-    "strconv"
-    "strings"
+	"fmt"
+	"strconv"
+	"strings"
 )
 
 const t = `               55
@@ -26,32 +26,32 @@ const t = `               55
 27 02 92 23 08 71 76 84 15 52 92 63 81 10 44 10 69 93`
 
 func main() {
-    lines := strings.Split(t, "\n")
-    f := strings.Fields(lines[len(lines)-1])
-    d := make([]int, len(f))
-    var err error
-    for i, s := range f {
-        if d[i], err = strconv.Atoi(s); err != nil {
-            panic(err)
-        }
-    }
-    d1 := d[1:]
-    var l, r, u int
-    for row := len(lines) - 2; row >= 0; row-- {
-        l = d[0]
-        for i, s := range strings.Fields(lines[row]) {
-            if u, err = strconv.Atoi(s); err != nil {
-                panic(err)
-            }
-            if r = d1[i]; l > r {
-                d[i] = u + l
-            } else {
-                d[i] = u + r
-            }
-            l = r
-        }
-    }
-    fmt.Println(d[0])
+	lines := strings.Split(t, "\n")
+	f := strings.Fields(lines[len(lines)-1])
+	d := make([]int, len(f))
+	var err error
+	for i, s := range f {
+		if d[i], err = strconv.Atoi(s); err != nil {
+			panic(err)
+		}
+	}
+	d1 := d[1:]
+	var l, r, u int
+	for row := len(lines) - 2; row >= 0; row-- {
+		l = d[0]
+		for i, s := range strings.Fields(lines[row]) {
+			if u, err = strconv.Atoi(s); err != nil {
+				panic(err)
+			}
+			if r = d1[i]; l > r {
+				d[i] = u + l
+			} else {
+				d[i] = u + r
+			}
+			l = r
+		}
+	}
+	fmt.Println(d[0])
 }
 
 //\Maximum-triangle-path-sum\maximum-triangle-path-sum.go

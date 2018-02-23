@@ -10,20 +10,20 @@ func cube(x float64) float64 { return math.Pow(x, 3) }
 type ffType func(float64) float64
 
 func compose(f, g ffType) ffType {
-    return func(x float64) float64 {
-        return f(g(x))
-    }
+	return func(x float64) float64 {
+		return f(g(x))
+	}
 }
 
 func main() {
-    // collection A
-    funclist := []ffType{math.Sin, math.Cos, cube}
-    // collection B
-    funclisti := []ffType{math.Asin, math.Acos, math.Cbrt}
-    for i := 0; i < 3; i++ {
-        // apply composition and show result
-        fmt.Println(compose(funclisti[i], funclist[i])(.5))
-    }
+	// collection A
+	funclist := []ffType{math.Sin, math.Cos, cube}
+	// collection B
+	funclisti := []ffType{math.Asin, math.Acos, math.Cbrt}
+	for i := 0; i < 3; i++ {
+		// apply composition and show result
+		fmt.Println(compose(funclisti[i], funclist[i])(.5))
+	}
 }
 
 //\First-class-functions\first-class-functions.go

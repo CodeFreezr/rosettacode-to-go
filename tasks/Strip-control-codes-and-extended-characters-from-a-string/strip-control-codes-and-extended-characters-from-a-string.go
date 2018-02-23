@@ -1,9 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"golang.org/x/text/transform"
 	"golang.org/x/text/unicode/norm"
-	"fmt"
 	"strings"
 )
 

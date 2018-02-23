@@ -91,7 +91,7 @@ func appMain(driver gxui.Driver) {
 	pendulum2 := &numericalPendulum{PHI_ZERO, 0.0, 0.0, time.Time{}}
 
 	go func() {
-		for _ = range ticker.C {
+		for range ticker.C {
 			canvas := driver.CreateCanvas(math.Size{ANIMATION_WIDTH, 2 * ANIMATION_HEIGHT})
 			canvas.Clear(gxui.White)
 

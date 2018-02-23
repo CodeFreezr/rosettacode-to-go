@@ -1,19 +1,19 @@
 package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 
-    "golang.org/x/crypto/ssh/terminal"
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 func main() {
-    w, h, err := terminal.GetSize(int(os.Stdout.Fd()))
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    fmt.Println(h, w)
+	w, h, err := terminal.GetSize(int(os.Stdout.Fd()))
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(h, w)
 }
 
 //\Terminal-control-Dimensions\terminal-control-dimensions-1.go

@@ -17,60 +17,60 @@ type Seq []int
 
 // New returns a Seq with the two base terms.
 func New() *Seq {
-    return &Seq{1, 1} // Step 1 of the RC task.
+	return &Seq{1, 1} // Step 1 of the RC task.
 }
 
 // TwoMore appends two more terms to p.
 // It's the body of the loop in the RC algorithm.
 // Generate(), FirstN(), and Find() wrap this body in different ways.
 func (p *Seq) TwoMore() {
-    s := *p
-    n := len(s) / 2 // Steps 2 and 5 of the RC task.
-    c := s[n]
-    *p = append(s, c+s[n-1], c) // Steps 3 and 4 of the RC task.
+	s := *p
+	n := len(s) / 2 // Steps 2 and 5 of the RC task.
+	c := s[n]
+	*p = append(s, c+s[n-1], c) // Steps 3 and 4 of the RC task.
 }
 
 // Generator returns a generator function that returns successive terms
 // (until overflow.)
 func Generator() func() int {
-    n := 0
-    p := New()
-    return func() int {
-        if len(*p) == n {
-            p.TwoMore()
-        }
-        t := (*p)[n]
-        n++
-        return t
-    }
+	n := 0
+	p := New()
+	return func() int {
+		if len(*p) == n {
+			p.TwoMore()
+		}
+		t := (*p)[n]
+		n++
+		return t
+	}
 }
 
 // FirstN lazily extends p as needed so that it has at least n terms.
 // FirstN then returns a list of the first n terms.
 func (p *Seq) FirstN(n int) []int {
-    for len(*p) < n {
-        p.TwoMore()
-    }
-    return []int((*p)[:n])
+	for len(*p) < n {
+		p.TwoMore()
+	}
+	return []int((*p)[:n])
 }
 
 // Find lazily extends p as needed until it contains the value x
 // Find then returns the slice index of x in p.
 func (p *Seq) Find(x int) int {
-    for n, f := range *p {
-        if f == x {
-            return n
-        }
-    }
-    for {
-        p.TwoMore()
-        switch x {
-        case (*p)[len(*p)-2]:
-            return len(*p) - 2
-        case (*p)[len(*p)-1]:
-            return len(*p) - 1
-        }
-    }
+	for n, f := range *p {
+		if f == x {
+			return n
+		}
+	}
+	for {
+		p.TwoMore()
+		switch x {
+		case (*p)[len(*p)-2]:
+			return len(*p) - 2
+		case (*p)[len(*p)-1]:
+			return len(*p) - 1
+		}
+	}
 }
 
 //\Stern-Brocot-sequence\stern-brocot-sequence-2.go

@@ -72,7 +72,7 @@ func (g *grid) String() string {
 	// reallocations if the size is large.
 	buf.Grow((len(g.cell) + 1) * len(g.cell[0]) * 7)
 
-	for _ = range g.cell[0] {
+	for range g.cell[0] {
 		buf.WriteString("+")
 		buf.WriteString(hopen[false])
 	}

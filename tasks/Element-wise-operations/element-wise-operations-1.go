@@ -1,54 +1,54 @@
 package element
 
 import (
-    "fmt"
-    "math"
+	"fmt"
+	"math"
 )
 
 type Matrix struct {
-    ele    []float64
-    stride int
+	ele    []float64
+	stride int
 }
 
 func MatrixFromRows(rows [][]float64) Matrix {
-    if len(rows) == 0 {
-        return Matrix{nil, 0}
-    }
-    m := Matrix{make([]float64, len(rows)*len(rows[0])), len(rows[0])}
-    for rx, row := range rows {
-        copy(m.ele[rx*m.stride:(rx+1)*m.stride], row)
-    }
-    return m
+	if len(rows) == 0 {
+		return Matrix{nil, 0}
+	}
+	m := Matrix{make([]float64, len(rows)*len(rows[0])), len(rows[0])}
+	for rx, row := range rows {
+		copy(m.ele[rx*m.stride:(rx+1)*m.stride], row)
+	}
+	return m
 }
 
 func like(m Matrix) Matrix {
-    return Matrix{make([]float64, len(m.ele)), m.stride}
+	return Matrix{make([]float64, len(m.ele)), m.stride}
 }
 
 func (m Matrix) String() string {
-    s := ""
-    for e := 0; e < len(m.ele); e += m.stride {
-        s += fmt.Sprintf("%6.3f \n", m.ele[e:e+m.stride])
-    }
-    return s
+	s := ""
+	for e := 0; e < len(m.ele); e += m.stride {
+		s += fmt.Sprintf("%6.3f \n", m.ele[e:e+m.stride])
+	}
+	return s
 }
 
 type binaryFunc64 func(float64, float64) float64
 
 func elementWiseMM(m1, m2 Matrix, f binaryFunc64) Matrix {
-    z := like(m1)
-    for i, m1e := range m1.ele {
-        z.ele[i] = f(m1e, m2.ele[i])
-    }
-    return z
+	z := like(m1)
+	for i, m1e := range m1.ele {
+		z.ele[i] = f(m1e, m2.ele[i])
+	}
+	return z
 }
 
 func elementWiseMS(m Matrix, s float64, f binaryFunc64) Matrix {
-    z := like(m)
-    for i, e := range m.ele {
-        z.ele[i] = f(e, s)
-    }
-    return z
+	z := like(m)
+	for i, e := range m.ele {
+		z.ele[i] = f(e, s)
+	}
+	return z
 }
 
 func add(a, b float64) float64 { return a + b }

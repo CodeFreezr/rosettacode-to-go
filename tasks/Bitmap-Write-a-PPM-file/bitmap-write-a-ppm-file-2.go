@@ -5,17 +5,17 @@ package main
 // * Bitmap task
 
 import (
-    "raster"
-    "fmt"
+	"fmt"
+	"raster"
 )
 
 func main() {
-    b := raster.NewBitmap(400, 300)
-    b.FillRgb(0x240008) // a dark red
-    err := b.WritePpmFile("write.ppm")
-    if err != nil {
-        fmt.Println(err)
-    }
+	b := raster.NewBitmap(400, 300)
+	b.FillRgb(0x240008) // a dark red
+	err := b.WritePpmFile("write.ppm")
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
 //\Bitmap-Write-a-PPM-file\bitmap-write-a-ppm-file-2.go

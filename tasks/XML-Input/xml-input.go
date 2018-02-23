@@ -1,8 +1,8 @@
 package main
 
 import (
-    "encoding/xml"
-    "fmt"
+	"encoding/xml"
+	"fmt"
 )
 
 const XML_Data = `
@@ -18,19 +18,19 @@ const XML_Data = `
 `
 
 type Students struct {
-    Student []Student
+	Student []Student
 }
 
 type Student struct {
-    Name string `xml:",attr"`
-    //  Gender      string `xml:",attr"`
-    //  DateOfBirth string `xml:",attr"`
-    //  Pets        []Pet  `xml:"Pet"`
+	Name string `xml:",attr"`
+	//  Gender      string `xml:",attr"`
+	//  DateOfBirth string `xml:",attr"`
+	//  Pets        []Pet  `xml:"Pet"`
 }
 
 type Pet struct {
-    Type string `xml:",attr"`
-    Name string `xml:",attr"`
+	Type string `xml:",attr"`
+	Name string `xml:",attr"`
 }
 
 // xml.Unmarshal quietly skips well formed input with no corresponding
@@ -38,15 +38,15 @@ type Pet struct {
 // Pets commented out of the Student struct, as above, Student contains
 // only Name, and this is the only value extracted from the input XML_Data.
 func main() {
-    var data Students
-    err := xml.Unmarshal([]byte(XML_Data), &data)
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    for _, s := range data.Student {
-        fmt.Println(s.Name)
-    }
+	var data Students
+	err := xml.Unmarshal([]byte(XML_Data), &data)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	for _, s := range data.Student {
+		fmt.Println(s.Name)
+	}
 }
 
 //\XML-Input\xml-input.go

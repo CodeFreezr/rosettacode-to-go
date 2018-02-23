@@ -6,13 +6,13 @@ import "fmt"
 // In quotes because Go does not use that term or have that exact concept.
 // Go simply has types that can have methods.
 type picnicBasket struct {
-    nServings int // "instance variables"
-    corkscrew bool
+	nServings int // "instance variables"
+	corkscrew bool
 }
 
 // a method (yes, Go uses the word method!)
 func (b *picnicBasket) happy() bool {
-    return b.nServings > 1 && b.corkscrew
+	return b.nServings > 1 && b.corkscrew
 }
 
 // a "constructor."
@@ -24,29 +24,29 @@ func (b *picnicBasket) happy() bool {
 // shown is sufficient however, it is not idiomatic to define the function.
 // Rather, code that needs a new object would simply contain &picnicBasket{...
 func newPicnicBasket(nPeople int) *picnicBasket {
-    // arbitrary code to interpret arguments, check resources, etc.
-    // ...
-    // return data new object.
-    // this is the concise syntax.  there are other ways of doing it.
-    return &picnicBasket{nPeople, nPeople > 0}
+	// arbitrary code to interpret arguments, check resources, etc.
+	// ...
+	// return data new object.
+	// this is the concise syntax.  there are other ways of doing it.
+	return &picnicBasket{nPeople, nPeople > 0}
 }
 
 // how to instantiate it.
 func main() {
-    var pb picnicBasket          // create on stack (probably)
-    pbl := picnicBasket{}        // equivalent to above
-    pbp := &picnicBasket{}       // create on heap.  pbp is pointer to object.
-    pbn := new(picnicBasket)     // equivalent to above
-    forTwo := newPicnicBasket(2) // using constructor
-    // equivalent to above.  field names, called keys, are optional.
-    forToo := &picnicBasket{nServings: 2, corkscrew: true}
+	var pb picnicBasket          // create on stack (probably)
+	pbl := picnicBasket{}        // equivalent to above
+	pbp := &picnicBasket{}       // create on heap.  pbp is pointer to object.
+	pbn := new(picnicBasket)     // equivalent to above
+	forTwo := newPicnicBasket(2) // using constructor
+	// equivalent to above.  field names, called keys, are optional.
+	forToo := &picnicBasket{nServings: 2, corkscrew: true}
 
-    fmt.Println(pb.nServings, pb.corkscrew)
-    fmt.Println(pbl.nServings, pbl.corkscrew)
-    fmt.Println(pbp)
-    fmt.Println(pbn)
-    fmt.Println(forTwo)
-    fmt.Println(forToo)
+	fmt.Println(pb.nServings, pb.corkscrew)
+	fmt.Println(pbl.nServings, pbl.corkscrew)
+	fmt.Println(pbp)
+	fmt.Println(pbn)
+	fmt.Println(forTwo)
+	fmt.Println(forToo)
 }
 
 //\Classes\classes-1.go

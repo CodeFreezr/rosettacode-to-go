@@ -64,7 +64,7 @@ func (g *grid) String() string {
 	buf.Grow((len(g.cell) + 2) * (len(g.cell[0]) + 3))
 
 	buf.WriteByte('+')
-	for _ = range g.cell[0] {
+	for range g.cell[0] {
 		buf.WriteByte('-')
 	}
 	buf.WriteString("+\n")

@@ -1,9 +1,9 @@
 package main
 
 import (
-    "fmt"
-    "os"
-    "text/template"
+	"fmt"
+	"os"
+	"text/template"
 )
 
 var tmpl = `<?xml version="1.0"?>
@@ -27,28 +27,28 @@ var tmpl = `<?xml version="1.0"?>
 
 // structure specifies position and size to draw symbol
 type xysz struct {
-    X, Y, Sz int
+	X, Y, Sz int
 }
 
 // example data to specify drawing the symbol twice,
 // with different position and size.
 var yys = []xysz{
-    {20, 20, 100},
-    {140, 30, 60},
+	{20, 20, 100},
+	{140, 30, 60},
 }
 
 func main() {
-    xt := template.New("")
-    template.Must(xt.Parse(tmpl))
-    f, err := os.Create("yy.svg")
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    if err := xt.Execute(f, yys); err != nil {
-        fmt.Println(err)
-    }
-    f.Close()
+	xt := template.New("")
+	template.Must(xt.Parse(tmpl))
+	f, err := os.Create("yy.svg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	if err := xt.Execute(f, yys); err != nil {
+		fmt.Println(err)
+	}
+	f.Close()
 }
 
 //\Yin-and-yang\yin-and-yang.go

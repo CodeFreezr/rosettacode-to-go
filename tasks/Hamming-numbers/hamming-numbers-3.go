@@ -86,7 +86,7 @@ func main() {
 
 	hamiter := Hamming()
 	rarr := make([]*big.Int, 20)
-	for i, _ := range rarr {
+	for i := range rarr {
 		rarr[i] = hamiter()
 	}
 	fmt.Println(rarr)

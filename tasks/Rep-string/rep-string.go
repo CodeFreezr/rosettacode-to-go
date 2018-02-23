@@ -1,17 +1,17 @@
 package main
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
 func rep(s string) int {
-    for x := len(s) / 2; x > 0; x-- {
-        if strings.HasPrefix(s, s[x:]) {
-            return x
-        }
-    }
-    return 0
+	for x := len(s) / 2; x > 0; x-- {
+		if strings.HasPrefix(s, s[x:]) {
+			return x
+		}
+	}
+	return 0
 }
 
 const m = `
@@ -28,13 +28,13 @@ const m = `
 1`
 
 func main() {
-    for _, s := range strings.Fields(m) {
-        if n := rep(s); n > 0 {
-            fmt.Printf("%q  %d rep-string %q\n", s, n, s[:n])
-        } else {
-            fmt.Printf("%q  not a rep-string\n", s)
-        }
-    }
+	for _, s := range strings.Fields(m) {
+		if n := rep(s); n > 0 {
+			fmt.Printf("%q  %d rep-string %q\n", s, n, s[:n])
+		} else {
+			fmt.Printf("%q  not a rep-string\n", s)
+		}
+	}
 }
 
 //\Rep-string\rep-string.go

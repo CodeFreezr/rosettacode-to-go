@@ -1,4 +1,5 @@
 package main
-func main() { }
+
+func main() {}
 
 //\Empty-program\empty-program.go

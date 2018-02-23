@@ -9,10 +9,10 @@ package main
 import "raster"
 
 func main() {
-    g := raster.NewGrmap(400, 300)
-    g.AaLine(7.4, 12.3, 307, 122.5)
-    g.AaLine(177.4, 12.3, 127, 222.5)
-    g.Bitmap().WritePpmFile("wu.ppm")
+	g := raster.NewGrmap(400, 300)
+	g.AaLine(7.4, 12.3, 307, 122.5)
+	g.AaLine(177.4, 12.3, 127, 222.5)
+	g.Bitmap().WritePpmFile("wu.ppm")
 }
 
 //\Xiaolin-Wus-line-algorithm\xiaolin-wus-line-algorithm-2.go

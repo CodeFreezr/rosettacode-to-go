@@ -1,9 +1,9 @@
 package main
 
 import (
-	"golang.org/x/net/websocket"
 	"flag"
 	"fmt"
+	"golang.org/x/net/websocket"
 	"html/template"
 	"io"
 	"math"

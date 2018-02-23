@@ -7,9 +7,9 @@ func main() {
 	for {
 		value++
 		fmt.Println(value)
-                if value%6 != 0 {
-                        break
-                }
+		if value%6 != 0 {
+			break
+		}
 	}
 }
 

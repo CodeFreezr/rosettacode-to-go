@@ -4,7 +4,7 @@ import "fmt"
 
 type Func func(int) int
 type FuncFunc func(Func) Func
-type RecursiveFunc func (RecursiveFunc) Func
+type RecursiveFunc func(RecursiveFunc) Func
 
 func main() {
 	fac := Y(almost_fac)
@@ -36,7 +36,7 @@ func almost_fib(f Func) Func {
 		if x <= 2 {
 			return 1
 		}
-		return f(x-1)+f(x-2)
+		return f(x-1) + f(x-2)
 	}
 }
 

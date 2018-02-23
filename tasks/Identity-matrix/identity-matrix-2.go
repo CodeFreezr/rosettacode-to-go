@@ -1,13 +1,13 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    mat "github.com/skelterjohn/go.matrix"
+	mat "github.com/skelterjohn/go.matrix"
 )
 
 func main() {
-    fmt.Println(mat.Eye(3))
+	fmt.Println(mat.Eye(3))
 }
 
 //\Identity-matrix\identity-matrix-2.go
